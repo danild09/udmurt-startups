@@ -1,0 +1,39 @@
+{
+  "name": "udmurt-entrepreneurs-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@react-oauth/google": "^0.13.4",
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "set DANGEROUSLY_DISABLE_HOST_CHECK=true&& set SKIP_PREFLIGHT_CHECK=true&& react-scripts start",
+    "start:unix": "DANGEROUSLY_DISABLE_HOST_CHECK=true SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000"
+}
