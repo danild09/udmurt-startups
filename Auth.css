@@ -1,0 +1,170 @@
+.auth-container {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  text-align: left;
+}
+
+.auth-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  padding: 1.2rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 0, 51, 0.2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-submit {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.auth-links {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.auth-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  background: rgba(255, 0, 51, 0.1);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 0, 51, 0.3);
+}
+
+/* Radio buttons (Roles) styling */
+.role-selection .role-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.role-option {
+  flex: 1;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.role-option input[type="radio"] {
+  display: none;
+}
+
+.role-option.selected {
+  border-color: var(--primary-color);
+  background: rgba(255, 0, 51, 0.1);
+  color: var(--primary-color);
+}
+
+.auth-warning {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+/* Divider for alternative login methods */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  margin: 1.5rem 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-divider span {
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
