@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: udmurt-startups-backend
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_DIR
+        value: /var/data
+    disk:
+      name: sqlite-data
+      mountPath: /var/data
+      sizeGB: 1
