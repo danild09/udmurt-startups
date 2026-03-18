@@ -1,0 +1,22 @@
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: 18
+
+build:
+  # Команда сборки (устанавливаем все зависимости)
+  command: npm install && cd client && npm install && npm run build
+  # Копируем только то, что нужно для работы
+  artifacts:
+    - server/
+    - client/build/
+    - package.json
+
+run:
+  # Команда запуска (используем наш основной index.js)
+  command: node server/index.js
+  # Переменные окружения (можно также задать в панели Amvera)
+  persistence:
+    - mountPath: /data
+      name: sqlite-data
